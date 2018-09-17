@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">SearchJobs</string>
+    <string name="edit_text_job_descripition_hint">Enter Job Description</string>
+    <string name="edit_text_job_location_hint">Enter Job Location</string>
+    <string name="full_time">Full time</string>
+    <string name="search_jobs_button_name">Search Jobs</string>
+    <string name="job_listings_label">Job Listings</string>
+    <string name="job_details_label">Position Details</string>
+    <string name="details_position_title">Title :</string>
+    <string name="details_location">Location :</string>
+    <string name="details_positions_company">Company :</string>
+    <string name="details_position_description">Description :</string>
+    <string name="No_item">No Items to Display ヾ｜￣ー￣｜ﾉ</string>
+    <string name="No_network">Error in loading/ No network (¤﹏¤) </string>
+</resources>
