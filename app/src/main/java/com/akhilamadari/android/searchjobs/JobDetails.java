@@ -5,12 +5,15 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+
+// Detail screen for job listing clicked
 public class JobDetails extends AppCompatActivity {
 
     private TextView titleTV;
     private TextView locationTV;
     private TextView descriptionTV;
     private TextView companyTV;
+
 
 
     @Override
@@ -27,12 +30,13 @@ public class JobDetails extends AppCompatActivity {
         companyTV = findViewById(R.id.position_company);
 
         Intent intent = getIntent();
-
+        // taking  inputs from joblisting activity and  displaying them in a detailed screen> activity
         String pTitle = intent.getStringExtra("pName");
         String pLocation = intent.getStringExtra("pLocation");
         String pDescription = intent.getStringExtra("pDescription");
         String pCompany = intent.getStringExtra("pCompany");
 
+        // removing html tags > Filtering
         pDescription = pDescription.replaceAll("\\<.*?\\>", "");
 
         titleTV.setText(pTitle);

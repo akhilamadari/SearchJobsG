@@ -28,7 +28,7 @@
         <activity android:name=".JobDetails"
             android:label= "@string/job_details_label"
             android:theme="@style/AppTheme"
-            android:parentActivityName=".JobListings">
+           >
         </activity>
     </application>
 

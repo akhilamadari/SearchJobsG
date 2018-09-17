@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
+//user interactive screen for user to put in the choice of job and location
 public class MainActivity extends AppCompatActivity {
 
     private final String TAG = MainActivity.class.getSimpleName();
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         mButton = findViewById(R.id.search_jobs);
 
         description = findViewById(R.id.job_description_entry);
@@ -43,13 +45,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                SharedPreferences.Editor editor = getPreferences(MODE_PRIVATE).edit();
-                editor.putString(DESCRIPTION, description.getText().toString());
-                editor.putString(LOCATION, location.getText().toString());
-                editor.putBoolean(FULLTIME,fTimeCheck);
 
 
                 Intent i = new Intent(MainActivity.this, JobListings.class);
+
+                i.putExtra(DESCRIPTION, description.getText().toString());
+                i.putExtra(LOCATION, location.getText().toString());
+                i.putExtra(FULLTIME,fTimeCheck);
+
                 startActivity(i);
             }
         });
